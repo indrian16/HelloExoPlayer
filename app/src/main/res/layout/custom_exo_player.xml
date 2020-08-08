@@ -46,6 +46,54 @@
         android:outlineProvider="none"
         tools:targetApi="lollipop" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/exo_rew"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:layout_gravity="center"
+        app:icon="@drawable/replay"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:cornerRadius="100dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        android:outlineProvider="none"
+        tools:targetApi="lollipop" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/exo_ffwd"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:layout_gravity="center"
+        app:icon="@drawable/forward"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:cornerRadius="100dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        android:outlineProvider="none"
+        tools:targetApi="lollipop" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,13 +110,18 @@
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
             android:includeFontPadding="false"
-            android:textColor="#FFBEBEBE"/>
+            android:textColor="@color/colorPrimary"/>
 
-        <View
-            android:id="@id/exo_progress_placeholder"
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="26dp"/>
+            android:layout_height="16dp"
+            app:bar_height="4dp"
+            app:played_color="@color/colorPrimary"
+            app:unplayed_color="@android:color/white"
+            app:buffered_color="@color/colorAccent"
+            app:scrubber_color="@color/colorPrimary"/>
 
         <TextView android:id="@id/exo_duration"
             android:layout_width="wrap_content"
@@ -78,7 +131,7 @@
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
             android:includeFontPadding="false"
-            android:textColor="#FFBEBEBE"/>
+            android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
 
